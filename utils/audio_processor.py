@@ -30,17 +30,20 @@ def download_youtube_audio(url :str) ->str:
         # ─── ADDED TO FIX YouTube blocks the request from Streamlit Cloud's IP address or HTTP 403 FORBIDDEN ERROR ───
         "cachedir": False,
         "nocheckcertificate": True,
+        "rm_cachedir": True,
         "http_headers": {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "en-us,en;q=0.5",
+            "Accept-Language": "en-US,en;q=0.5",
         },
         "extractor_args": {
             "youtube": {
-                "player_client": ["android", "web"],
+                # Uses embedded TV & mobile web clients which bypass cloud datacenter IP blocks
+                "player_client": ["tvembed", "mweb", "ios"],
             }
         }
     }
+    
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         # Extracts metadata and downloads the file
