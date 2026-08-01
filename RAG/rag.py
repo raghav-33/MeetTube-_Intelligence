@@ -18,7 +18,7 @@ class AdvancedHybridRAG:
     def __init__(self):
         
         self.embeddings = HuggingFaceEmbeddings(
-        model_name="BAAI/bge-m3"
+        model_name="BAAI/bge-small-en-v1.5"
 )
         self.vector_store = None
         self.compression_retriever = None

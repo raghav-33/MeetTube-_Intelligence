@@ -22,9 +22,14 @@ st.set_page_config(
     layout="wide"
 )
 
+# ─── 1. CACHED RAG INSTANCE INITIALIZATION ───
+@st.cache_resource
+def get_rag_store():
+    return AdvancedHybridRAG()
+
 # Initialize your RAG system instance 
 if "rag_store" not in st.session_state:
-    st.session_state.rag_store = AdvancedHybridRAG()
+    st.session_state.rag_store = get_rag_store()
 
 # ─── 2. DYNAMIC THREAD & CHAT HISTORY MANAGEMENT ───
 # We use a dictionary to store multiple ChatGPT-like sessions.
