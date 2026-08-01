@@ -15,7 +15,6 @@ rank-bm25
 sentence-transformers
 ffmpeg-python
 pydub
-audioop-lts
 yt-dlp
 python-dotenv
 pydantic
