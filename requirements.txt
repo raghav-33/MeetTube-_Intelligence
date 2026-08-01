@@ -14,6 +14,7 @@ flashrank
 rank-bm25
 sentence-transformers
 ffmpeg-python
+pydub
 yt-dlp
 python-dotenv
 pydantic
