@@ -1,0 +1,48 @@
+# Environment variables (API Keys)
+.env
+.env.*
+
+# Python Virtual Environment
+myproject/
+venv/
+.venv/
+env/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+utils/__pycache__/
+agents/__pycache__/
+core/__pycache__/
+RAG/__pycache__/
+evaluation/__pycache__/
+
+# LangGraph Memory / Local SQLite Database Files
+*.db
+memory.db
+memory.db-shm
+memory.db-wal
+
+# Audio/Video Downloads & Transcripts
+.downloades/
+transcript.txt
+*.mp3
+*.mp4
+*.wav
+temp_*
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Vector Store Cache (ChromaDB / SQLite)
+chroma_db/
+*.sqlite3
+
+# IDE / Editor Specific Files
+.vscode/
+.idea/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

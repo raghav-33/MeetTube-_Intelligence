@@ -1,0 +1,7 @@
+User upload / paste -> url or audio -> standrized the audio into wav by strict enforcement -> chunking whole audio into 10min  parts -> Transcribe in Batches: Send each 10-minute segment to the Whisper API separately -> Reassemble / combine whole transcription into 1 big chunk.
+why ? if we send whole audio suppose meeting audio of 1 hr -> then whisper model take too much time to convert and my api request fail beacuse (nforce strict payload limits (usually 25 MB per request). A 1-hour meeting audio file will easily exceed 25 MB, causing the API request to fail.)
+''' Speech-to-text APIs (like Whisper) perform best when audio is in a specific format (16kHz, single-channel WAV) and will crash if files are too large. '''
+ 
+// Now Problem 
+we can't whole transcript to llm at once as it may too long , exceed context window of llm and may hallucinate also
+so first split transcript into smaller chunks then give to llm

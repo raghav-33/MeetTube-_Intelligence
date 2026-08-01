@@ -1,0 +1,16 @@
+streamlit
+langgraph
+langchain
+langchain-core
+langchain-mistralai
+langchain-groq
+langchain-community
+langchain-huggingface
+chromadb
+flashrank
+rank-bm25
+sentence-transformers
+ffmpeg-python
+yt-dlp
+python-dotenv
+pydantic
