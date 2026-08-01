@@ -6,6 +6,7 @@ langchain-mistralai
 langchain-groq
 langchain-community
 langchain-huggingface
+langchain-chroma
 chromadb
 flashrank
 rank-bm25
