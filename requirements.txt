@@ -12,7 +12,6 @@ langchain-chroma
 chromadb
 flashrank
 rank-bm25
-sentence-transformers
 ffmpeg-python
 pydub
 audioop-lts
