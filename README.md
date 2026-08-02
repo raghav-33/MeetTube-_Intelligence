@@ -2,7 +2,7 @@
 
 An agentic, RAG-powered platform that analyzes YouTube videos and meeting recordings to generate summaries, answer questions, and extract key insights.Features a stateful multi-agent decision graph with SQLite checkpointing, two-stage Advanced Hybrid Search with Cross-Encoder reranking, and an automated RAGAS evaluation suite.
 
-**🔗 Live Demo:** [https://your-deployed-link.onrender.com](https://your-deployed-link.onrender.com)
+**🔗 Live Demo:** [https://meettube-intelligence.onrender.com](https://meettube-intelligence.onrender.com)
 
 > ⚠️ **Note:** The Render-hosted live deployment is currently **disabled** (free-tier hosting limitations). Please check the **Demo** section below for a full video walkthrough of the app in action.
 
