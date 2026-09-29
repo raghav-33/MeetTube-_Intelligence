@@ -28,7 +28,7 @@ def download_youtube_audio(url :str) ->str:
         'youtube': {
             'player_client': ['android', 'ios']
         }
-        }
+        },
         "quiet": True, # Suppresses massive terminal logs
 
     }
