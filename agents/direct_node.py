@@ -33,7 +33,3 @@ def direct_chat_executor(state: GraphState) -> dict:
     
     return {"messages": [AIMessage(content=response_text)]}
     
-
-'''
-but as you are saying for message placeholder user's latest message is already inside the chat_history list but what if user start chat with hello how are you , it will be user's first message and no previous messag exist then what 
-'''
