@@ -22,11 +22,7 @@ def semantic_router(state: GraphState) -> str:
     
     
     # 2. Force the LLM to output our Pydantic schema
-    base_llm = router_llm = ChatMistralAI(
-        model="open-mistral-7b",  # Blazing fast compared to mistral-large
-        temperature=0,            # Force deterministic choices
-        max_tokens=15             # Prevents the model from rambling, saving massive completion time
-    )
+    base_llm = get_llm()
     llm = base_llm.with_structured_output(RouteDecision)
     
     # prompt 
