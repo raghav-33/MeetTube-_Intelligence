@@ -25,11 +25,6 @@ def download_youtube_audio(url :str) ->str:
                 "preferredquality": "192",
             }
         ],
-        'extractor_args': {
-        'youtube': {
-            'player_client': ['web_safari', 'web_embedded', '-tv_downgraded']
-        }
-    },
         "quiet": True, # Suppresses massive terminal logs
         'no_warnings': True,
         
