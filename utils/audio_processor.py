@@ -17,6 +17,7 @@ def download_youtube_audio(url :str) ->str:
     ydl_opts = {
         "format": "bestaudio/best",
         "outtmpl": output_path,
+        'cookiefile': 'cookies.txt',
         "postprocessors": [
             {
                 "key": "FFmpegExtractAudio",
@@ -24,13 +25,9 @@ def download_youtube_audio(url :str) ->str:
                 "preferredquality": "192",
             }
         ],
-        'extractor_args': {
-        'youtube': {
-            'player_client': ['android', 'ios']
-        }
-        },
         "quiet": True, # Suppresses massive terminal logs
-
+        'no_warnings': True,
+        
     }
     
     
