@@ -27,10 +27,11 @@ def download_youtube_audio(url :str) ->str:
         ],
         'extractor_args': {
         'youtube': {
-            'player_client': ['mweb', 'ios'],
+            'player_client': ['android'],
             'player_skip': ['web', 'tv_downgraded']
         }
     },
+        'nocheckcertificate': True,
         "quiet": True, # Suppresses massive terminal logs
         'no_warnings': True,
         
