@@ -27,8 +27,7 @@ def download_youtube_audio(url :str) ->str:
         ],
         'extractor_args': {
         'youtube': {
-            'player_client': ['android'],
-            'player_skip': ['web', 'tv_downgraded']
+            'player_client': ['tv_simply', 'default', '-tv']
         }
     },
         'nocheckcertificate': True,
